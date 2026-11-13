@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне — Growing Landing</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html"><span class="brand-mark">G</span> grow<span class="brand-dot">.</span>dev</a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <label class="burger" for="nav-toggle"
+               aria-label="Открыть или закрыть меню"><span></span><span></span><span></span></label>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a>
+            <a href="#profile">Профиль</a>
+            <a href="#stats">Статистика</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Задание 1. Профиль: текст в этих элементах заменит JavaScript -->
+    <section class="section container about" id="profile">
+        <p class="section-label">Страница / Обо мне</p>
+        <div class="about-grid">
+            <div class="about-panel">
+                <div class="panel-icon">✳</div>
+                <h3 id="student-name">Моё имя</h3>
+                <p class="profession" id="student-role">Моя профессия</p>
+                <p class="description" id="student-desc">Краткое описание</p>
+                <div class="pill-row">
+                    <span id="student-city">Город</span>
+                    <span id="student-age">Возраст</span>
+                    <span id="student-status">Студент</span>
+                </div>
+            </div>
+
+            <!-- Задание 3. Два предложения, собранные в JS -->
+            <aside class="learning-panel">
+                <p class="learning-caption">О СЕБЕ</p>
+                <p id="sentence-plus">Предложение 1</p>
+                <p id="sentence-template">Предложение 2</p>
+                <p id="project-name">Название проекта</p>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Задание 2. Моя статистика -->
+    <section class="section section-soft" id="stats">
+        <div class="container">
+            <p class="section-label">Моя статистика</p>
+            <div class="stats-grid">
+                <div class="stat-card"><strong id="stat-total">—</strong><span>Всего проектов</span></div>
+                <div class="stat-card"><strong id="stat-left">—</strong><span>Осталось проектов</span></div>
+                <div class="stat-card"><strong id="stat-hours">—</strong><span>Часов на проекты</span></div>
+                <div class="stat-card"><strong id="stat-average">—</strong><span>Проектов в месяц</span></div>
+                <div class="stat-card"><strong id="stat-months">—</strong><span>Месяцев обучения</span></div>
+                <div class="stat-card"><strong id="stat-skills">—</strong><span>Навыков</span></div>
+            </div>
+            <p><a class="button button-primary" href="index.html">← На главную</a></p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <a class="brand" href="index.html"><span class="brand-mark">G</span> grow<span class="brand-dot">.</span>dev</a>
+        <span>Учебный проект · Growing Landing</span>
+    </div>
+</footer>
+
+</body>
+</html>
