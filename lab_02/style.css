@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e8ebfa;
+    color: #222;
+}
+
+.form-container {
+    position: relative;            
+    max-width: 600px;
+    margin: 50px auto;             
+    padding: 30px;                 
+    background-color: #f0f4ff;
+    border: 2px solid #667eea;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+    position: absolute;            
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    background: #764ba2;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #667eea;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+}
+textarea{
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus{
+    border-color: #764ba2;
+}
+
+textarea:focus {
+    border-color: #764ba2;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+#submit-btn {
+    width: 100%;
+    padding: 14px 32px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;            
+    top: 10px;
+}
+
+#submit-btn:hover { 
+    background-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #555;
+}
+
+@media (max-width: 450px) {
+    .form-container {
+        margin: 20px 15px;
+        padding: 25px 20px;
+    }
+}
+
+
+body input {
+    background-color: #f90909;
+}

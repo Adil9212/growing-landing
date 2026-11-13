@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport: страница подстраивается под ширину экрана телефона -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка с адаптивным меню (бургер без JavaScript) -->
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="#">Галактика</a>
+
+            <!-- Порядок важен: input -> label -> navv -->
+            <input id="menu-toggle" class="menu-toggle" type="checkbox">
+            <label for="menu-toggle" class="burger" aria-label="Меню">☰</label>
+
+            <nav class="nav">
+                <a href="#">Главная</a>
+                <a href="#">Планеты</a>
+                <a href="#">Новости</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный блок лендинга -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Путешествие по Солнечной системе</h1>
+                <p>Узнай больше о планетах, которые находятся рядом с нами.</p>
+                <a class="btn" href="#planets">Начать</a>
+            </div>
+            <img src="images/hero.png" alt="Планета с кольцами в космосе">
+        </div>
+    </section>
+
+    <!-- Макет: основной контент + боковая панель (Grid) -->
+    <div class="container layout">
+
+        <main class="content" id="planets">
+            <h2>Планеты</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="images/mercury.png" alt="Меркурий">
+                    <h3>Меркурий</h3>
+                    <p>Самая близкая к Солнцу планета.</p>
+                </article>
+                <article class="card">
+                    <img src="images/venus.png" alt="Венера">
+                    <h3>Венера</h3>
+                    <p>Самая горячая планета Солнечной системы.</p>
+                </article>
+                <article class="card">
+                    <img src="images/earth.png" alt="Земля">
+                    <h3>Земля</h3>
+                    <p>Наш дом, единственная планета с жизнью.</p>
+                </article>
+                <article class="card">
+                    <img src="images/mars.png" alt="Марс">
+                    <h3>Марс</h3>
+                    <p>Красная планета с красной пылью.</p>
+                </article>
+                <article class="card">
+                    <img src="images/jupiter.png" alt="Юпитер">
+                    <h3>Юпитер</h3>
+                    <p>Самая большая планета Солнечной системы.</p>
+                </article>
+                <article class="card">
+                    <img src="images/saturn.png" alt="Сатурн">
+                    <h3>Сатурн</h3>
+                    <p>Планета с красивыми кольцами.</p>
+                </article>
+                
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Категории</h3>
+                <ul>
+                    <li><a href="#">Планеты</a></li>
+                    <li><a href="#">Звёзды</a></li>
+                    <li><a href="#">Кометы</a></li>
+                    <li><a href="#">Спутники</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h3>Интересный факт</h3>
+                <p>Один день на Венере длится дольше, чем её год.</p>
+            </div>
+            <div class="widget">
+                <h3>Новости</h3>
+                <ul>
+                    <li><a href="#">Новый снимок Юпитера</a></li>
+                    <li><a href="#">Миссия на Марс</a></li>
+                    <li><a href="#">Затмение в этом году</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="footer">
+        <p>Лабораторная работа №5 — Адаптивная вёрстка</p>
+    </footer>
+
+</body>
+</html>

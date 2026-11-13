@@ -1,0 +1,141 @@
+&:hover {
+  opacity: 0.8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #2d1f16;
+  background: #fbf6f0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: linear-gradient(135deg, #8b5e3c, #4a2c1a);
+  padding: 20px 0;
+  color: #ffffff;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header .nav a {
+  color: #ffffff;
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.header .nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero {
+  background: linear-gradient(135deg, #4a2c1a, #8b5e3c);
+  color: #ffffff;
+  padding: 80px 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 40px;
+  margin: 0 0 20px;
+}
+.hero p {
+  font-size: 18px;
+  margin: 0 0 20px;
+}
+.hero .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e8a33d;
+  color: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #2d1f16;
+}
+
+.menu {
+  padding: 60px 0;
+}
+.menu h2 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  max-width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+.card p {
+  margin: 0 0 20px;
+}
+.card .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #8b5e3c;
+  color: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer {
+  padding: 20px 0;
+  background: #2d1f16;
+  color: #ffffff;
+  text-align: center;
+}
+
+.dop .box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #004d00;
+  border-radius: 8px;
+  background: green;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.another-box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgb(216.3502304147, 139.400921659, 25.6497695853);
+  border-radius: 16px;
+  background: #e8a33d;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=styles.css.map */

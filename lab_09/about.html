@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Обо мне — страница учебного проекта Growing Landing">
+    <title>Обо мне — Growing Landing</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/about.js" defer></script>
+</head>
+<body class="about-page">
+
+<header class="header" id="top">
+    <div class="container header-inner">
+        <a class="brand" href="index.html"><span class="brand-mark">G</span> grow<span class="brand-dot">.</span>dev</a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <label class="burger" for="nav-toggle"
+               aria-label="Открыть или закрыть меню"><span></span><span></span><span></span></label>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html">Главная</a>
+            <a href="#stats">Статистика</a>
+            <a href="#level">Уровень</a>
+            <a href="#access">Доступ</a>
+            <a href="#card">Итог</a>
+        </nav>
+        <a class="header-cta" href="index.html#contact">Связаться <span>↗</span></a>
+    </div>
+</header>
+
+<main>
+    <!-- Задание 1: профиль. Текст в этих элементах подставит JavaScript -->
+    <section class="hero about-hero container" id="profile" aria-labelledby="student-name">
+        <div class="hero-copy">
+            <nav class="crumbs" aria-label="Где я нахожусь">
+                <a href="index.html">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Обо мне</span>
+            </nav>
+            <h1 id="student-name">Моё имя</h1>
+            <p class="about-role" id="student-role">Моя профессия</p>
+            <p class="hero-description" id="student-desc">Краткое описание</p>
+
+            <ul class="facts">
+                <li class="fact">
+                    <span class="fact-icon" aria-hidden="true">📍</span>
+                    <span class="fact-text"><small>Город</small><strong id="student-city">Город</strong></span>
+                </li>
+                <li class="fact">
+                    <span class="fact-icon" aria-hidden="true">🗓</span>
+                    <span class="fact-text"><small>Возраст</small><strong id="student-age">Возраст</strong></span>
+                </li>
+                <li class="fact">
+                    <span class="fact-icon" aria-hidden="true">🎓</span>
+                    <span class="fact-text"><small>Студент</small><strong id="student-status">Студент</strong></span>
+                </li>
+            </ul>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="#stats">Моя статистика <span>↓</span></a>
+                <a class="button button-outline" href="#info">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+            <div class="visual-orbit orbit-one"></div>
+            <div class="visual-orbit orbit-two"></div>
+            <div class="code-card">
+                <div class="code-header"><span class="traffic"><i></i><i></i><i></i></span><span>about.js</span><span>✦</span></div>
+                <div class="code-lines">
+                    <p><span class="violet">const</span> student = {</p>
+                    <p>&nbsp;&nbsp;learning: <span class="orange">true</span>,</p>
+                    <p>&nbsp;&nbsp;stack: [<span class="green">"HTML"</span>, <span class="green">"CSS"</span>, <span class="green">"JS"</span>]</p>
+                    <p>};</p>
+                    <p class="code-comment">// данные ниже подставляет JavaScript</p>
+                </div>
+            </div>
+            <div class="floating-chip chip-top">✦ <span>Первый курс</span></div>
+            <div class="floating-chip chip-bottom">⚡ <span>Учусь на практике</span></div>
+        </div>
+    </section>
+
+    <!-- Задание 2: статистика. Числа считает JavaScript -->
+    <section class="block block-soft" id="stats">
+        <div class="container">
+            <div class="block-head">
+                <h2>Моя статистика</h2>
+                <p>Немного цифр о моём обучении и проектах. Все числа считает JavaScript.</p>
+            </div>
+            <div class="metrics">
+                <article class="metric metric-main">
+                    <span class="metric-icon" aria-hidden="true">📁</span>
+                    <strong id="stat-total">—</strong>
+                    <span class="metric-name">Всего проектов</span>
+                    <small>завершённые и новые вместе</small>
+                </article>
+                <article class="metric">
+                    <span class="metric-icon" aria-hidden="true">🎯</span>
+                    <strong id="stat-left">—</strong>
+                    <span class="metric-name">Осталось сделать</span>
+                    <small>из проектов по плану</small>
+                </article>
+                <article class="metric">
+                    <span class="metric-icon" aria-hidden="true">📈</span>
+                    <strong id="stat-average">—</strong>
+                    <span class="metric-name">В среднем в месяц</span>
+                    <small>проектов</small>
+                </article>
+                <article class="metric">
+                    <span class="metric-icon" aria-hidden="true">⏱</span>
+                    <strong id="stat-hours">—</strong>
+                    <span class="metric-name">Часов на проекты</span>
+                    <small>по 3 часа на каждый</small>
+                </article>
+                <article class="metric">
+                    <span class="metric-icon" aria-hidden="true">🗓</span>
+                    <strong id="stat-months">—</strong>
+                    <span class="metric-name">Месяцев обучения</span>
+                    <small>с начала курса</small>
+                </article>
+                <article class="metric">
+                    <span class="metric-icon" aria-hidden="true">🛠</span>
+                    <strong id="stat-skills">—</strong>
+                    <span class="metric-name">Навыков</span>
+                    <small>HTML, CSS, JavaScript и другие</small>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Задание 3: информация о себе. Предложения собирает JavaScript -->
+    <section class="block" id="info">
+        <div class="container">
+            <div class="block-head">
+                <h2>Информация обо мне</h2>
+                <p>Те же данные, но уже собранные в текст.</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Коротко</h3>
+                    <dl class="info-list">
+                        <div><dt>Имя</dt><dd id="info-name">—</dd></div>
+                        <div><dt>Профессия</dt><dd id="info-role">—</dd></div>
+                        <div><dt>Город</dt><dd id="info-city">—</dd></div>
+                        <div><dt>Возраст</dt><dd id="info-age">—</dd></div>
+                        <div><dt>Студент</dt><dd id="info-student">—</dd></div>
+                        <div><dt>Проект</dt><dd id="project-name">—</dd></div>
+                    </dl>
+                </div>
+                <div class="say-stack">
+                    <figure class="say-card">
+                        <figcaption>Предложение, склеенное через <code>+</code></figcaption>
+                        <blockquote id="sentence-plus">—</blockquote>
+                    </figure>
+                    <figure class="say-card say-card-dark">
+                        <figcaption>Предложение из шаблонной строки <code>${}</code></figcaption>
+                        <blockquote id="sentence-template">—</blockquote>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Лабораторная №7, задание 1: уровень разработчика (if / else if / else) -->
+    <section class="block block-soft" id="level">
+        <div class="container">
+            <div class="block-head">
+                <h2>Мой уровень разработчика</h2>
+                <p>Уровень зависит от числа проектов. Его определяют условия if, else if и else.</p>
+            </div>
+            <div class="res-grid">
+                <div class="res res-level">
+                    <h3>Исходные данные</h3>
+                    <dl class="res-list">
+                        <div><dt>Проектов</dt><dd id="level-projects">—</dd></div>
+                        <div><dt>Возраст</dt><dd id="level-age">—</dd></div>
+                        <div><dt>Опыт</dt><dd id="level-exp">—</dd></div>
+                    </dl>
+                </div>
+                <div class="res res-level res-level-out">
+                    <h3>Результат</h3>
+                    <dl class="res-list">
+                        <div><dt>Уровень</dt><dd class="res-big" id="dev-level">—</dd></div>
+                        <div><dt>Возрастной статус</dt><dd id="age-status">—</dd></div>
+                        <div><dt>Статус Junior</dt><dd id="junior-status">—</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Задание 2: доступ и скидки (&&, ||, !) -->
+    <section class="block" id="access">
+        <div class="container">
+            <div class="block-head">
+                <h2>Доступ и стоимость услуг</h2>
+                <p>Доступ только для зарегистрированных совершеннолетних студентов и преподавателей.</p>
+            </div>
+            <div class="res-grid">
+                <div class="res res-access">
+                    <h3>Пользователь</h3>
+                    <dl class="res-list">
+                        <div><dt>Роль</dt><dd id="access-role">—</dd></div>
+                        <div><dt>Регистрация</dt><dd id="access-registered">—</dd></div>
+                        <div><dt>Доступ</dt><dd class="res-big" id="access-status">—</dd></div>
+                    </dl>
+                </div>
+                <div class="res res-access res-price">
+                    <h3>Стоимость</h3>
+                    <dl class="res-list">
+                        <div><dt>Исходная цена</dt><dd id="price-base">—</dd></div>
+                        <div><dt>Скидка</dt><dd id="discount-percent">—</dd></div>
+                        <div><dt>Сумма скидки</dt><dd id="discount-sum">—</dd></div>
+                        <div><dt>Итого</dt><dd class="res-big" id="price-final">—</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Задание 3: категория проекта (select и switch) -->
+    <section class="block block-soft" id="category">
+        <div class="container">
+            <div class="block-head">
+                <h2>Выбор категории проекта</h2>
+                <p>Скрипт читает выбранный пункт списка и через switch находит категорию.</p>
+            </div>
+            <div class="res-grid">
+                <div class="res res-cat">
+                    <h3>Выбор</h3>
+                    <label class="select-label" for="projectType">Категория проекта</label>
+                    <select class="select-box" id="projectType" name="projectType">
+                        <option value="web" selected>Веб-сайт</option>
+                        <option value="mobile">Мобильное приложение</option>
+                        <option value="game">Игра</option>
+                        <option value="design">UX/UI дизайн</option>
+                        <option value="other">Другое</option>
+                    </select>
+                    <p class="res-note">Значение читается при загрузке страницы. Чтобы проверить другую категорию, переставьте selected в HTML и обновите страницу.</p>
+                </div>
+                <div class="res res-cat res-cat-out">
+                    <h3>Результат</h3>
+                    <dl class="res-list">
+                        <div><dt>Категория</dt><dd class="res-big" id="cat-name">—</dd></div>
+                        <div><dt>Описание</dt><dd id="cat-desc">—</dd></div>
+                        <div><dt>Пример</dt><dd id="cat-example">—</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Задание 4: итоговая карточка (тернарный оператор) -->
+    <section class="block" id="card">
+        <div class="container">
+            <div class="block-head">
+                <h2>Итоговая карточка разработчика</h2>
+                <p>Здесь собраны результаты всех трёх заданий. Статус проекта выбирает тернарный оператор.</p>
+            </div>
+            <div class="final-card">
+                <div class="final-col">
+                    <h3>Разработчик</h3>
+                    <dl class="final-list">
+                        <div><dt>Имя</dt><dd id="card-name">—</dd></div>
+                        <div><dt>Возраст</dt><dd id="card-age">—</dd></div>
+                        <div><dt>Совершеннолетие</dt><dd id="card-adult">—</dd></div>
+                        <div><dt>Проектов</dt><dd id="card-projects">—</dd></div>
+                        <div><dt>Уровень</dt><dd id="card-level">—</dd></div>
+                        <div><dt>Опыт</dt><dd id="card-exp">—</dd></div>
+                        <div><dt>Junior</dt><dd id="card-junior">—</dd></div>
+                    </dl>
+                </div>
+                <div class="final-col">
+                    <h3>Категория и доступ</h3>
+                    <dl class="final-list">
+                        <div><dt>Категория</dt><dd id="card-category">—</dd></div>
+                        <div><dt>Описание</dt><dd id="card-desc">—</dd></div>
+                        <div><dt>Пример</dt><dd id="card-example">—</dd></div>
+                        <div><dt>Доступ</dt><dd id="card-access">—</dd></div>
+                    </dl>
+                    <h3 class="final-sub">Стоимость</h3>
+                    <dl class="final-list">
+                        <div><dt>Исходная цена</dt><dd id="card-base">—</dd></div>
+                        <div><dt>Скидка</dt><dd id="card-discount">—</dd></div>
+                        <div><dt>Итого</dt><dd id="card-final">—</dd></div>
+                    </dl>
+                </div>
+                <div class="final-status">
+                    <span>Статус проекта</span>
+                    <strong id="card-status">—</strong>
+                    <small>Проект считается завершённым, когда выполнены все запланированные проекты.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="back-band">
+            <div>
+                <h2>Остальное на главной</h2>
+                <p>Проекты, услуги и контакты собраны на первой странице.</p>
+            </div>
+            <div class="back-actions">
+                <a class="button button-primary" href="index.html">← На главную</a>
+                <a class="button button-light" href="index.html#contact">Связаться</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <a class="brand" href="index.html"><span class="brand-mark">G</span> grow<span class="brand-dot">.</span>dev</a>
+        <span>Учебный проект · Growing Landing</span>
+        <a href="#top">Наверх ↑</a>
+    </div>
+</footer>
+
+</body>
+</html>

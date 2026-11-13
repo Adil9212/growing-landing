@@ -1,0 +1,266 @@
+/* =========================================================
+   Лабораторная работа №5. Адаптивная вёрстка (Mobile First)
+   Сначала пишем стили для телефона, потом расширяем
+   их для планшета (48rem) и компьютера (64rem).
+   Размеры только в rem / % / fr / vw, без px.
+   ========================================================= */
+
+/* ===== Общие настройки ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: #0b1026;
+    color: #e8ecff;
+}
+
+/* Изображения сохраняют пропорции и не выходят за контейнер */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Контейнер: ширина в % с ограничением 75rem, по центру */
+.container {
+    width: min(100% - 2rem, 75rem);
+    margin-inline: auto;
+}
+
+/* ===== Шапка и бургер-меню (Flexbox) ===== */
+.header {
+    padding-block: 1rem;
+    background: linear-gradient(90deg, #1b2250, #3a2a7a);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;                 /* nav может перенестись на новую строку */
+    gap: 1rem;
+}
+
+.logo {
+    margin-right: auto;              /* логотип слева, остальное справа */
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Скрытый checkbox: он только хранит состояние «открыто / закрыто» */
+.menu-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.burger {
+    display: block;                  /* на телефоне бургер виден */
+    cursor: pointer;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.nav {
+    display: none;                   /* на телефоне меню скрыто */
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Если checkbox отмечен, показываем nav, идущий после него */
+.menu-toggle:checked ~ .nav {
+    display: flex;
+}
+
+.nav a {
+    color: #c9d1ff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ===== Главный блок (Grid) ===== */
+.hero {
+    padding-block: 2rem;
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;      /* на телефоне одна колонка */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(1.75rem, 6vw, 2.75rem);   /* размер шрифта подстраивается под экран */
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+}
+
+.hero p {
+    margin-bottom: 1.5rem;
+    color: #c9d1ff;
+}
+
+.hero img {
+    border-radius: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-0.15rem);
+}
+
+/* ===== Макет с боковой панелью (Grid) ===== */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;      /* на телефоне sidebar под основным контентом */
+    gap: 1.5rem;
+    padding-block: 1rem 2rem;
+}
+
+.content h2 {
+    margin-bottom: 1rem;
+}
+
+/* ===== Карточки (Grid) ===== */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;      /* телефон: 1 колонка */
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-0.3rem);
+}
+
+.card img {
+    margin-bottom: 0.75rem;
+    border-radius: 0.75rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #c9d1ff;
+}
+
+/*  Боковая панель (Flexbox)  */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.widget {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+}
+
+.widget h3 {
+    margin-bottom: 0.75rem;
+}
+
+.widget ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.widget a {
+    color: #c9d1ff;
+}
+
+.widget a:hover {
+    color: #ffffff;
+}
+
+/*  футер  */
+.footer {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8f9bd6;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
+}
+
+/* 
+   ПЛАНШЕТ (от 48rem = 768px)
+    */
+@media (min-width: 48rem) {
+    /* Меню: бургер скрыт, ссылки в одну строку */
+    .burger {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        width: auto;
+        flex-direction: row;
+        gap: 1.5rem;
+    }   
+
+    /* Главный блок: текст и картинка рядом */
+    .hero-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Основной контент шире sidebar (3fr / 1fr) */
+    .layout {
+        grid-template-columns: minmax(0, 3fr) minmax(12rem, 1fr);
+    }
+
+    /* Карточки: 2 колонки */
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 
+   КОМПЬЮТЕР (от 64rem = 1024px)
+    */
+@media (min-width: 64rem) {
+    /* Карточки: 3 колонки */
+    .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
